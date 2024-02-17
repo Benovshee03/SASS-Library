@@ -1,21 +1,27 @@
 // theme colors
-$primary: #AB7442 ;
-$secondary:  #f5f5f5 ;
-$error: #dc3545;
-$warning: #f7b84b;
-$success: #1ac888;
-$info: white;
+$primary: #3B71CA ;
+$secondary:  #9FA6B2 ;
+$danger: #DC4C64;
+$warning: #E4A11B;
+$success: #14A44D;
+$info: #54B4D3;
+$light:#FBFBFB;
+$dark:#332D2D;
 
 
-// color palette   $color.primary  $color.secondary
+
 $colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "error": $error,
-  "info": $info,
-  "white": white,
-  "black": black,
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
 );
+// color palette   $color.primary  $color.secondary
+
 
 $btn-hover-colors: (
   "primary": white,

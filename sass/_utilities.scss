@@ -176,6 +176,6 @@ $utilities: (
       @include apply-utilities($property, $value);
     }
   }
-  @debug $property $values;
+  // @debug $property $values;
 };
 
