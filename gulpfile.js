@@ -1,23 +1,15 @@
-// node_modules klasörü içerisinden gulp kütüphanesini çağırıyoruz
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series } = require('gulp')
+const sass = require('gulp-sass')(require('sass'))
+// const purgecss = require('gulp-purgecss')
 
-
-// gulp-sass kütüphanesini çağırıyoruz
-const sass = require('gulp-sass')(require('sass'));
-
-
-// hangi dosyanın, hangi dosya ile değiştirileceğini belirtiyoruz
 function buildStyles() {
-    return src('sass/**/*.scss')
-        .pipe(sass())
-        .pipe(dest('css'));
+  return src('src/**/*.scss')
+    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(dest('dist'))
 }
-
-// index.scss dosyasında değişiklik olduğunda buildStyles fonksiyonunu çalıştır
 
 function watchTask() {
-    watch(['sass/**/*.scss'], buildStyles);
+  watch(['src/**/*.scss'], buildStyles)
 }
 
-// default olarak çalıştırılacak fonksiyonu belirtiyoruz
-exports.default = series(buildStyles, watchTask);
+exports.default = series(buildStyles, watchTask)
