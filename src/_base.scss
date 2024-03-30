@@ -21,7 +21,7 @@ body {
 
 // Default container styles
 .container {
-  width: 90%;
+  max-width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -48,9 +48,3 @@ body {
 //   color: $primary;
 // }
 
-@font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('../fonts/Roboto-Regular.ttf'), url('../fonts/Roboto-Light.ttf'),
-    url('../fonts/Roboto-Bold.ttf'), url('../fonts/Roboto-Black.ttf'),
-    url('../fonts/Roboto-Medium.ttf'), url('../fonts/Roboto-Thin.ttf');
-}

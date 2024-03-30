@@ -47,23 +47,28 @@
 $grid-columns:12;
 $layout-values: flex-start ,flex-end , center , space-between , space-around;
 $grid-gaps:(
-    "0":0,
-    "1":5px,
-    "2":10px,
-    "3":20px,
+'0': 0,
+'1': 5px,
+'2': 10px,
+'3': 15px,
+'4': 20px,
+'5': 25px,
 );
-.container{
-width: 100%;
-max-width: 1400px;
-margin: 0, auto;
-padding: 0,20px;
-box-sizing: border-box;
+// .container{
+// width: 100%;
+// max-width: 1400px;
+// margin: 0, auto;
+// padding: 0,20px;
+// box-sizing: border-box;
+// }
+// .row{
+//     display: flex;
+//     flex-direction: row wrap;
+// }
+$layout-values: flex-start, flex-end, center, space-between, space-around;
 
-}
-.row{
-    display: flex;
-    flex-direction: row wrap;
-}
+$flex-directions: row, column, row-reverse, column-reverse, unset;
+
 @each $key, $value in $grid-gaps{
     .gap-#{$key} > * {
         padding: $value;
@@ -78,6 +83,11 @@ box-sizing: border-box;
         justify-content: $value;
     }
 }
+@each $value in $flex-directions {
+    .flex-#{$value} {
+      flex-direction: $value;
+    }
+  }
 //Mixin for column styles
 @mixin col-styles($i){
     box-sizing: border-box;

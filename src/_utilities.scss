@@ -133,7 +133,7 @@ $utilities: (
       "sm": math.div($base-border-radius, 2),
       "md": $base-border-radius,
       "lg": $base-border-radius * 2,
-      "full": 50,
+      "full": 50%,
     ),
   ),
   "display": (
@@ -157,7 +157,153 @@ $utilities: (
       "xxl": $font-size-xxl,
     ),
   ),
+  'font-weight': (
+    'prefix': 'fw',
+    'values': (
+      '300': 300,
+      '400': 400,
+      '500': 500,
+      '600': 600,
+      '700': 700,
+      '800': 800,
+      '900': 900,
+    ),
+  ),
+  'width': (
+    'prefix': 'w',
+    'values': (
+      '10': 10%,
+      '20': 20%,
+      '30': 30%,
+      '40': 40%,
+      '50': 50%,
+      '60': 60%,
+      '70': 70%,
+      '80': 80%,
+      '90': 90%,
+      '100': 100%,
+    ),
+  ),
+  'height': (
+    'prefix': 'h',
+    'values': (
+      '10': 10%,
+      '20': 20%,
+      '30': 30%,
+      '40': 40%,
+      '50': 50%,
+      '60': 60%,
+      '70': 70%,
+      '80': 80%,
+      '90': 90%,
+      '100': 100%,
+    ),
+  ),
+  'top': (
+    'prefix': 'top',
+    'values': (
+      '1': 10px,
+      '2': 20px,
+      '3': 30px,
+      '4': 40px,
+      '5': 50px,
+      '6': 60px,
+      '7': 70px,
+      '8': 80px,
+      '9': 90px,
+      '10': 100px,
+    ),
+  ),
+  'bottom': (
+    'prefix': 'bottom',
+    'values': (
+      '1': 10px,
+      '2': 20px,
+      '3': 30px,
+      '4': 40px,
+      '5': 50px,
+      '6': 60px,
+      '7': 70px,
+      '8': 80px,
+      '9': 90px,
+      '10': 100px,
+    ),
+  ),
+  'right': (
+    'prefix': 'right',
+    'values': (
+      '1': 10px,
+      '2': 20px,
+      '3': 30px,
+      '4': 40px,
+      '5': 50px,
+      '6': 60px,
+      '7': 70px,
+      '8': 80px,
+      '9': 90px,
+      '10': 100px,
+    ),
+  ),
+  'left': (
+    'prefix': 'left',
+    'values': (
+      '1': 10px,
+      '2': 20px,
+      '3': 30px,
+      '4': 40px,
+      '5': 50px,
+      '6': 60px,
+      '7': 70px,
+      '8': 80px,
+      '9': 90px,
+      '10': 100px,
+    ),
+  ),
+  'align-items': (
+    'prefix': 'align-items',
+    'values': (
+      'center': center,
+      'end': end,
+      'start': start,
+    ),
+  ),
+  'position': (
+    'prefix': 'position',
+    'values': (
+      'absolute': absolute,
+      'fixed': fixed,
+      'sticky': sticky,
+      'relative': relative,
+    ),
+  ),
+  'text-decoration': (
+    'prefix': 'text-dec',
+    'values': (
+      'none': none,
+      'dashed': dashed,
+      'dotted': dotted,
+      'underline': underline,
+      'line-through': line-through,
+      'double': double,
+    ),
+  ),
+  'text-transform': (
+    'prefix': 'text-t',
+    'values': (
+      'capitalize': capitalize,
+      'lowercase': lowercase,
+      'uppercase': uppercase,
+    ),
+  ),
 );
+$text-values: start, center, right, left, end;
+
+@each $value in $text-values {
+  .text-#{$value} {
+    text-align: $value;
+  }
+}
+
 @mixin apply-utilities($property, $value) {
   #{$property}: $value;
 }
