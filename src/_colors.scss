@@ -1,5 +1,5 @@
 @each $key, $value in $colors {
-  @debug "<div class="bg-#{$key}">BackgroundColor-  bg-#{$key}</div>";
+  @debug "<div class="bg-#{$key}">BackgroundColor-bg-#{$key}</div>";
   .text-#{$key} {
     color: $value;
     .text-hover-#{$key} {

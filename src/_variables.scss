@@ -1,6 +1,6 @@
 // theme colors
 $primary: #781527 ;
-$secondary:  #9FA6B2 ;
+$secondary:  #2B2B2B ;
 $danger: #DC4C64;
 $warning: #E4A11B;
 $success: #14A44D;
@@ -24,7 +24,7 @@ $colors: (
 
 
 $btn-hover-colors: (
-  "primary": white,
+  "primary": 781527,
   "secondary": white,
   "error": white,
   "info": black,
@@ -50,8 +50,9 @@ $base-border-radius: 10px;
 $base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 
 //fonts
-$base-font-size: 1.5rem;
+$base-font-size: 1rem;
 
+$font-size-xs:18px;
 $font-size-sm: $base-font-size * 0.75;
 $font-size-md: $base-font-size * 1.25;
 $font-size-lg: $base-font-size * 1.5;

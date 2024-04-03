@@ -3,9 +3,9 @@ const sass = require('gulp-sass')(require('sass'))
 // const purgecss = require('gulp-purgecss')
 
 function buildStyles() {
-  return src('src/**/*.scss')
-    .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(dest('dist'))
+  return src('src/**/*.scss', { base: 'src' })
+  .pipe(sass({ outputStyle: 'compressed' }))
+  .pipe(dest('dist'))
 }
 
 function watchTask() {

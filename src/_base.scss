@@ -13,17 +13,15 @@ body {
   margin: 0 auto;
 }
 
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+// .container-fluid {
+//   width: 100%;
+//   padding-right: 15px;
+//   padding-left: 15px;
+// }
 
 // Default container styles
 .container {
-  max-width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 1224px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -44,7 +42,7 @@ body {
   align-items: center;
 }
 
-// .active {
-//   color: $primary;
-// }
+.active {
+  color: $primary;
+}
 
