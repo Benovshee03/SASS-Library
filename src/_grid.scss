@@ -1,48 +1,3 @@
-
-
-
-
-
-
-// .container {
-//     width: 100%;
-//     max-width: 1400px;
-//     margin: 0 auto;
-
-// }
-// .row{
-//     display: flex;
-//     flex-direction: row wrap;
-
-// }
-// @include xs{
-//     @for $i from 1 through $grid-columns{
-//         .col-xs-#{$i}{
-//             box-sizing: border-box;
-//             flex-grow: 0;
-//             width: math.div($i * 100%, $grid-columns);
-
-//             background-color: tomato;
-//         }//col-xs-1
-//     }
-// }
-
-// @include sm{
-//     @for $i from 1 through $grid-columns{
-//         .col-sm-#{$i}{
-//             box-sizing: border-box;
-//             flex-grow: 0;
-//             width: math.div($i * 100%, $grid-columns);
-
-//             background-color: tomato;
-//         }
-//     }
-// }
-
-
-
-
-
 @use "sass:math";
 $grid-columns:12;
 $layout-values: flex-start ,flex-end , center , space-between , space-around;
@@ -54,17 +9,7 @@ $grid-gaps:(
 '4': 20px,
 '5': 25px,
 );
-// .container{
-// width: 100%;
-// max-width: 1400px;
-// margin: 0, auto;
-// padding: 0,20px;
-// box-sizing: border-box;
-// }
-// .row{
-//     display: flex;
-//     flex-direction: row wrap;
-// }
+
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 $flex-directions: row, column, row-reverse, column-reverse, unset;
@@ -122,3 +67,122 @@ $flex-directions: row, column, row-reverse, column-reverse, unset;
     @include create-columns("xxl")
 
 }
+.d-none {
+    display: none !important;
+  }
+  
+  .d-block {
+    display: block !important;
+  }
+  
+  .d-sm-none {
+    @include sm {
+      display: none !important;
+    }
+  }
+  
+  .d-sm-block {
+    @include sm {
+      display: block !important;
+    }
+  }
+  
+  .d-md-none {
+    @include md {
+      display: none !important;
+    }
+  }
+  
+  .d-md-block {
+    @include md {
+      display: block !important;
+    }
+  }
+  
+  .d-lg-none {
+    @include lg {
+      display: none !important;
+    }
+  }
+  
+  .d-lg-block {
+    @include lg {
+      display: block !important;
+    }
+  }
+  
+  .d-xl-none {
+    @include xl {
+      display: none !important;
+    }
+  }
+  
+  .d-xl-block {
+    @include xl {
+      display: block !important;
+    }
+  }
+  
+  .d-xxl-none {
+    @include xxl {
+      display: none !important;
+    }
+  }
+  
+  .d-xxl-block {
+    @include xxl {
+      display: block !important;
+    }
+  }
+
+
+
+
+
+
+
+// .container {
+//     width: 100%;
+//     max-width: 1400px;
+//     margin: 0 auto;
+
+// }
+// .container{
+// width: 100%;
+// max-width: 1400px;
+// margin: 0, auto;
+// padding: 0,20px;
+// box-sizing: border-box;
+// }
+// .row{
+//     display: flex;
+//     flex-direction: row wrap;
+// }
+// .row{
+//     display: flex;
+//     flex-direction: row wrap;
+
+// }
+// @include xs{
+//     @for $i from 1 through $grid-columns{
+//         .col-xs-#{$i}{
+//             box-sizing: border-box;
+//             flex-grow: 0;
+//             width: math.div($i * 100%, $grid-columns);
+
+//             background-color: tomato;
+//         }//col-xs-1
+//     }
+// }
+
+// @include sm{
+//     @for $i from 1 through $grid-columns{
+//         .col-sm-#{$i}{
+//             box-sizing: border-box;
+//             flex-grow: 0;
+//             width: math.div($i * 100%, $grid-columns);
+
+//             background-color: tomato;
+//         }
+//     }
+// }

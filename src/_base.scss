@@ -16,6 +16,7 @@ body {
 .btn{
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 // .container-fluid {
 //   width: 100%;
@@ -29,7 +30,11 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
+.smContainer{
+  max-width: 1016px;
+  margin-right: auto;
+  margin-left: auto;
+}
 // h1 {
 //   font-weight: 900;
 // }
@@ -44,6 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .active {
