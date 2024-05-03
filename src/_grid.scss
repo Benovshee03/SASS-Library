@@ -1,145 +1,137 @@
 @use "sass:math";
-$grid-columns:12;
-$layout-values: flex-start ,flex-end , center , space-between , space-around;
-$grid-gaps:(
-'0': 0,
-'1': 5px,
-'2': 10px,
-'3': 15px,
-'4': 20px,
-'5': 25px,
+$grid-columns: 12;
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+$grid-gaps: (
+  "0": 0,
+  "1": 5px,
+  "2": 10px,
+  "3": 15px,
+  "4": 20px,
+  "5": 25px,
 );
 
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 $flex-directions: row, column, row-reverse, column-reverse, unset;
 
-@each $key, $value in $grid-gaps{
-    .gap-#{$key} > * {
-        padding: $value;
-    }
-    .gap-#{$key} {
-        margin-left: -$value;
-        margin-right: -$value;
-    }
+@each $key, $value in $grid-gaps {
+  .gap-#{$key} > * {
+    padding: $value;
+  }
+  .gap-#{$key} {
+    margin-left: -$value;
+    margin-right: -$value;
+  }
 }
-@each $value in $layout-values{
-    .justify-#{$value}{
-        justify-content: $value;
-    }
+@each $value in $layout-values {
+  .justify-#{$value} {
+    justify-content: $value;
+  }
 }
 @each $value in $flex-directions {
-    .flex-#{$value} {
-      flex-direction: $value;
-    }
+  .flex-#{$value} {
+    flex-direction: $value;
   }
+}
+
 //Mixin for column styles
-@mixin col-styles($i){
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: math.div($i * 100%, $grid-columns);
+@mixin col-styles($i) {
+  box-sizing: border-box;
+  flex-grow: 0;
+  width: math.div($i * 100%, $grid-columns);
 }
 // Mixin to create column classes
-@mixin create-columns($breakpoint){
-    @for $i from 1 through $grid-columns{
-        .col-#{$breakpoint}-#{$i}{
-            @include col-styles($i)
-        }
+@mixin create-columns($breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$breakpoint}-#{$i} {
+      @include col-styles($i);
     }
+  }
 }
-@include xs{
-    @include create-columns("xs")
+@include xs {
+  @include create-columns("xs");
 }
-@include sm{
-    @include create-columns("sm")
+@include sm {
+  @include create-columns("sm");
 }
-@include md{
-    @include create-columns("md")
+@include md {
+  @include create-columns("md");
+}
+@include lg {
+  @include create-columns("lg");
+}
+@include xl {
+  @include create-columns("xl");
+}
+@include xxl {
+  @include create-columns("xxl");
+}
 
-}
-@include lg{
-    @include create-columns("lg")
-}
-@include xl{
-    @include create-columns("xl")
-}
-@include xxl{
-    @include create-columns("xxl")
-
-}
 .d-none {
+  display: none ;
+}
+.d-block {
+  display: block ;
+}
+.d-sm-none {
+  @include sm {
     display: none !important;
   }
-  
-  .d-block {
+}
+
+.d-sm-block {
+  @include sm {
     display: block !important;
   }
-  
-  .d-sm-none {
-    @include sm {
-      display: none !important;
-    }
-  }
-  
-  .d-sm-block {
-    @include sm {
-      display: block !important;
-    }
-  }
-  
-  .d-md-none {
-    @include md {
-      display: none !important;
-    }
-  }
-  
-  .d-md-block {
-    @include md {
-      display: block !important;
-    }
-  }
-  
-  .d-lg-none {
-    @include lg {
-      display: none !important;
-    }
-  }
-  
-  .d-lg-block {
-    @include lg {
-      display: block !important;
-    }
-  }
-  
-  .d-xl-none {
-    @include xl {
-      display: none !important;
-    }
-  }
-  
-  .d-xl-block {
-    @include xl {
-      display: block !important;
-    }
-  }
-  
-  .d-xxl-none {
-    @include xxl {
-      display: none !important;
-    }
-  }
-  
-  .d-xxl-block {
-    @include xxl {
-      display: block !important;
-    }
-  }
+}
 
+.d-md-none {
+  @include md {
+    display: none !important;
+  }
+}
 
+.d-md-block {
+  @include md {
+    display: block !important;
+  }
+}
 
+.d-lg-none {
+  @include lg {
+    display: none !important;
+  }
+}
 
+.d-lg-block {
+  @include lg {
+    display: block !important;
+  }
+}
 
+.d-xl-none {
+  @include xl {
+    display: none !important;
+  }
+}
 
+.d-xl-block {
+  @include xl {
+    display: block !important;
+  }
+}
+
+.d-xxl-none {
+  @include xxl {
+    display: none !important;
+  }
+}
+
+.d-xxl-block {
+  @include xxl {
+    display: block !important;
+  }
+}
 
 // .container {
 //     width: 100%;
